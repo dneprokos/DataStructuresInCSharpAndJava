@@ -54,6 +54,7 @@
     <Compile Include="Implementations\0_Generics\MySimpleCollectionGeneric.cs" />
     <Compile Include="Implementations\0_Generics\MySimpleGeneric.cs" />
     <Compile Include="Implementations\0_Generics\SimpleGenericOnlyReference.cs" />
+    <Compile Include="Implementations\1_Lists\LinqExample.cs" />
     <Compile Include="Implementations\1_Lists\ListWorflowExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
