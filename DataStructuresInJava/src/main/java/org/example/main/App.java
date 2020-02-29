@@ -1,4 +1,6 @@
-package org.example;
+package org.example.main;
+
+import org.example.calls.Generics;
 
 /**
  * Hello world!
@@ -7,7 +9,6 @@ package org.example;
 public class App 
 {
     public static void main( String[] args ) {
-        DataStructures.Generics.CallAllExamples();
-
+        Generics.CallAllExamples();
     }
 }
