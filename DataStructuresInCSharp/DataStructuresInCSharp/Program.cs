@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataStructuresInCSharp.Implementations._2_LinkedLists;
+using System;
+using System.Collections.Generic;
 
 namespace DataStructuresInCSharp
 {
@@ -6,8 +8,14 @@ namespace DataStructuresInCSharp
     {
         static void Main(string[] args)
         {
-            DataStructures.Generics.MultipleValuesGeneric();
+            //LinkedListExample.RealWorldExample();
+
+            LinkedList<string> test = new LinkedList<string>();
+            LinkedListNode<string> node = test.First;
+
+            Console.WriteLine(node);
             Console.ReadLine();
+
         }
     }
 }

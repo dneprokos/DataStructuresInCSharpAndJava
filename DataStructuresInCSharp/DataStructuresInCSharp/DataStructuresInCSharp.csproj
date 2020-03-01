@@ -56,6 +56,9 @@
     <Compile Include="Implementations\0_Generics\SimpleGenericOnlyReference.cs" />
     <Compile Include="Implementations\1_Lists\LinqExample.cs" />
     <Compile Include="Implementations\1_Lists\ListWorflowExample.cs" />
+    <Compile Include="Implementations\2_LinkedLists\LinkedListExample.cs" />
+    <Compile Include="Implementations\_CommonSteps\PagesDbEmulator.cs" />
+    <Compile Include="Implementations\_CommonSteps\WebDriverInitialization.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
