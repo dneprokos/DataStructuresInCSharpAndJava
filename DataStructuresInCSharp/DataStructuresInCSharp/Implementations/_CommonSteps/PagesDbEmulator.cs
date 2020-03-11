@@ -13,7 +13,5 @@ namespace DataStructuresInCSharp.Implementations._CommonSteps
 
             return ScorePerPage;
         }
-
-
     }
 }

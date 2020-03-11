@@ -1,14 +1,11 @@
 package org.example.main;
 
-import org.example.calls.Generics;
+import implementations.arrayLists.StreamApiExamples;
+import implementations.linkedLists.LinkedListExample;
+import implementations.queue.QueueExample;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args ) {
-        Generics.CallAllExamples();
+public class App {
+    public static void main(String[] args) {
+        QueueExample.baseExample();
     }
 }

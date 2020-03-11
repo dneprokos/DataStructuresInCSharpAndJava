@@ -2,24 +2,29 @@
 
 namespace DataStructuresInCSharp.Implementations._0_Generics
 {
-    class MySimpleCollectionGeneric<T>
+    public class MySimpleCollectionGeneric<T>
     {
-        private List<T> collection = new List<T>();
+        public List<T> Collection { get; private set; }
 
-        public MySimpleCollectionGeneric<T> AddNew(T value)
+        public MySimpleCollectionGeneric()
         {
-            collection.Add(value);
+            Collection = new List<T>();
+        }
+
+        public MySimpleCollectionGeneric<T> Add(T value)
+        {
+            Collection.Add(value);
             return this;
         }
 
         public void ClearAll()
         {
-            collection.Clear();
+            Collection.Clear();
         }
 
         public List<T> GetAll()
         {
-            return collection;
+            return Collection;
         }
     }
 }

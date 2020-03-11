@@ -1,6 +1,11 @@
-﻿using DataStructuresInCSharp.Implementations._2_LinkedLists;
+﻿using DataStructuresInCSharp.Implementations._1_Lists;
+using DataStructuresInCSharp.Implementations._2_LinkedLists;
+using DataStructuresInCSharp.Implementations._3_HashTable;
+using DataStructuresInCSharp.Implementations._4_Queue;
+using DataStructuresInCSharp.Implementations._5_Stack;
+using DataStructuresInCSharp.Implementations._6_Tree;
 using System;
-using System.Collections.Generic;
+using static DataStructuresInCSharp.DataStructures;
 
 namespace DataStructuresInCSharp
 {
@@ -8,14 +13,9 @@ namespace DataStructuresInCSharp
     {
         static void Main(string[] args)
         {
-            //LinkedListExample.RealWorldExample();
+            StackExample.RealExample();
 
-            LinkedList<string> test = new LinkedList<string>();
-            LinkedListNode<string> node = test.First;
-
-            Console.WriteLine(node);
             Console.ReadLine();
-
         }
     }
 }

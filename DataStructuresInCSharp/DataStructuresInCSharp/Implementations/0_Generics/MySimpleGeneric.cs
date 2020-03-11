@@ -3,16 +3,11 @@
     //Simpliest generic
     public class MySimpleGeneric<T>
     {
-        private T genericVariable;
+        public T Value { get; }
 
-        public MySimpleGeneric(T genericVariable)
+        public MySimpleGeneric(T value)
         {
-            this.genericVariable = genericVariable;
-        }
-
-        public T GetGeneric()
-        {
-            return genericVariable;
+            Value = value;
         }
     }
 }

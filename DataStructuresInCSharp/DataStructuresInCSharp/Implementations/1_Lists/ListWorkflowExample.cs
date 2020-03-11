@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace DataStructuresInCSharp.Implementations._1_Lists
 {
-    public class ListWorflowExample
+    public class ListWorkflowExample
     {
         public static void BaseActions()
         {
@@ -18,13 +19,17 @@ namespace DataStructuresInCSharp.Implementations._1_Lists
 
             //Get Count
             int teamsCount = footballTeams.Count;
+            Console.WriteLine("Teams count = " + teamsCount);
 
             //Find and get element
             int index = footballTeams.BinarySearch("FC Dnipro");
+            Console.WriteLine("FC Dnipro index is " + index);
             string team = footballTeams[index];
+            Console.WriteLine($"Team found by index {index} is {team}", index, team);
 
             //Check if list contains some element
             bool isContains = footballTeams.Contains("Dynamo Kyiv");
+            Console.WriteLine("Contains Dynamo Kyiv?", isContains);
 
             //Remove element
             footballTeams.Remove("FC Dnipro");

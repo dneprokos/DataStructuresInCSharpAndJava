@@ -12,21 +12,21 @@ namespace DataStructuresInCSharp
             {
                 Console.WriteLine("#######Simple Generic Example#######");
                 var simpleIntGeneric = new MySimpleGeneric<int>(20);
-                Console.WriteLine(simpleIntGeneric.GetGeneric());
+                Console.WriteLine(simpleIntGeneric.Value);
 
                 var simpleStringGeneric = new MySimpleGeneric<string>("Hello World!");
-                Console.WriteLine(simpleStringGeneric.GetGeneric());
+                Console.WriteLine(simpleStringGeneric.Value);
             }
 
             public static void SimpleCollectionGeneric()
             {
                 Console.WriteLine("#######Simple Collection Generic Example#######");
                 var fibonacci = new MySimpleCollectionGeneric<int>();
-                fibonacci.AddNew(1).AddNew(2).AddNew(3).AddNew(5);
+                fibonacci.Add(1).Add(2).Add(3).Add(5);
 
                 foreach (var element in fibonacci.GetAll())
                 {
-                    Console.WriteLine(element);
+                    Console.Write(element + " ");
                 }
             }
 
@@ -44,9 +44,10 @@ namespace DataStructuresInCSharp
             public static void MultipleValuesGeneric()
             {
                 Console.WriteLine("#######Multiple Value Generic Example#######");
-                var keyCityPair = new MyMultipleGeneric<int, string>(1, "Kyiv");
-                KeyValuePair<int, string> data = keyCityPair.GetPair();
-                Console.WriteLine(string.Format("Key eqauls: {0}\nValue equals: {1}", data.Key, data.Value));
+                var phoneCountryPair = new MyMultipleGeneric<int, string>(380, "Ukraine");
+                KeyValuePair<int, string> data = phoneCountryPair.GetPair();
+                Console.WriteLine(string.Format("Key eqauls: {0}\nValue equals: {1}", 
+                    data.Key, data.Value));
             }
         }
     }

@@ -1,5 +1,6 @@
 package implementations.linkedLists;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class LinkedListExample {
@@ -12,17 +13,28 @@ public class LinkedListExample {
         pages.add("test1");
         pages.addFirst("test0");
         pages.addLast("test2");
+        pages.add("test3");
         Boolean isContains = pages.contains("test1");
-        pages.remove("test0");
-        pages.remove(0);
-        pages.removeFirst();
-        pages.removeLast();
 
         //Get values
         String search1 = pages.getFirst();
         String search2 = pages.get(2);
 
+        //Get count
         int count = pages.size();
+
+        //Node iterator
+        Iterator<String> iterator = pages.iterator();
+        while (iterator.hasNext()){
+            System.out.print("-->" + iterator.next());
+
+        }
+
+        //Remove
+        pages.remove("test0");
+        pages.remove(0);
+        pages.removeFirst();
+        pages.removeLast();
     }
 
 }

@@ -1,6 +1,6 @@
 ﻿using DataStructuresInCSharp.Implementations._CommonSteps;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -18,6 +18,15 @@ namespace DataStructuresInCSharp.Implementations._2_LinkedLists
             LinkedListNode<string> node2 = pages.AddFirst("test2");
             LinkedListNode<string> node3 = pages.AddBefore(node1, "test3");
             LinkedListNode<string> node4 = pages.AddAfter(node3, "test4");
+
+            LinkedListNode<string> currentEl = pages.First;
+            Console.Write(currentEl.Value);
+            while (currentEl.Next != null)
+            {
+                currentEl = currentEl.Next;
+                Console.Write("-->" + currentEl.Value);
+            }
+
             bool isContains = pages.Contains("test1");
             pages.RemoveFirst();
             pages.RemoveLast();
