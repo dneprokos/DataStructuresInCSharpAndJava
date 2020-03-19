@@ -1,6 +1,6 @@
 ﻿namespace DataStructuresInCSharp.Implementations._0_Generics
 {
-    //Simpliest generic
+    //Simple generic
     public class MySimpleGeneric<T>
     {
         public T Value { get; }

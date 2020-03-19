@@ -122,7 +122,7 @@ namespace DataStructuresInCSharp.Implementations._1_Lists
             int sum = initWords.Select(word => word.Length).Sum();
             Console.WriteLine("Sum of all chars: " + sum);
 
-            //Avarage
+            //Average
             double average = initWords.Select(word => word.Length).Average();
             Console.WriteLine("Average chars per word: " + average);
         }

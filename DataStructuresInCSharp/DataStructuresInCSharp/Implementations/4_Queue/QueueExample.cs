@@ -19,8 +19,12 @@ namespace DataStructuresInCSharp.Implementations._4_Queue
 
             //Returns first object in queue
             string firstInLine = queue.Peek();
+            Console.WriteLine("Peaked " + firstInLine);
+            Console.WriteLine("Count after first peak" + queue.Count);
             //Your turn
             string removedFromLine = queue.Dequeue();
+            Console.WriteLine("Removed " + removedFromLine);
+            Console.WriteLine("Count after remove " + queue.Count);
 
             //Queue count
             int queueCount = queue.Count;

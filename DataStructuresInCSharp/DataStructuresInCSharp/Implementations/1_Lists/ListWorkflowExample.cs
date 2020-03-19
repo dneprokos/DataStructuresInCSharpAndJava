@@ -29,13 +29,20 @@ namespace DataStructuresInCSharp.Implementations._1_Lists
 
             //Check if list contains some element
             bool isContains = footballTeams.Contains("Dynamo Kyiv");
-            Console.WriteLine("Contains Dynamo Kyiv?", isContains);
+            Console.WriteLine("Contains Dynamo Kyiv? " + isContains);
 
             //Remove element
             footballTeams.Remove("FC Dnipro");
 
             //Clear all list
             exFootballTeams.Clear();
+        }
+
+        public static void BaseExampleArray()
+        {
+            var footballTeams = new string [] { "Manchester United" };
+
+            var footballTeams2 = new string[2] { "FC Dnipro", "Dynamo Kyiv" };
         }
 
        

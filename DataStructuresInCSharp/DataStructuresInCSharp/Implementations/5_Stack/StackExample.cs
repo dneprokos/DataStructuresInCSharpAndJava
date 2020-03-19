@@ -6,7 +6,7 @@ namespace DataStructuresInCSharp.Implementations._5_Stack
 {
     public class StackExample
     {
-        public void BaseExample()
+        public static void BaseExample()
         {
             var stack = new Stack<string>();
             //Push on top
@@ -16,9 +16,13 @@ namespace DataStructuresInCSharp.Implementations._5_Stack
 
             //Remove from the top
             string removedTopStackItem = stack.Pop();
+            Console.WriteLine("Removed item " + removedTopStackItem);
+            Console.WriteLine("Item counts after remove " + stack.Count);
 
             //Get top without removing
             string topStackItem = stack.Peek();
+            Console.WriteLine("Peaked item " + topStackItem);
+            Console.WriteLine("Item counts after peak " + stack.Count);
 
             //Stack count
             int stackItemsCount = stack.Count;
