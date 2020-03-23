@@ -2,6 +2,7 @@ package implementations.linkedLists;
 
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 public class LinkedListExample {
     public static void LinkedListBase()
@@ -27,7 +28,16 @@ public class LinkedListExample {
         Iterator<String> iterator = pages.iterator();
         while (iterator.hasNext()){
             System.out.print("-->" + iterator.next());
+        }
 
+        ListIterator<String> li = pages.listIterator(0);
+        while (li.hasNext()) {
+            //your logic goes here
+            //if you need to go to the previous place
+            if (li.hasPrevious()) {
+                li.previous();
+                //further logic here...
+            }
         }
 
         //Remove

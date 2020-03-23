@@ -1,6 +1,7 @@
 package implementations.queue;
 
 import java.util.LinkedList;
+import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class QueueExample {
@@ -23,5 +24,14 @@ public class QueueExample {
         // implementation.
         int size = q.size();
         System.out.println("Size of queue-" + size);
+    }
+
+    public static void priorityQueue() {
+        PriorityQueue<String> queue
+                =new PriorityQueue<String>();
+        queue.add("Test1");
+        queue.add("Test2");
+        queue.peek();
+        queue.poll();
     }
 }

@@ -68,6 +68,7 @@
     <Compile Include="Implementations\6_Tree\OrganizationTree\JobTitle.cs" />
     <Compile Include="Implementations\6_Tree\OrganizationTree\Employee.cs" />
     <Compile Include="Implementations\6_Tree\TreeExample.cs" />
+    <Compile Include="Implementations\_CommonSteps\Employee.cs" />
     <Compile Include="Implementations\_CommonSteps\Message.cs" />
     <Compile Include="Implementations\_CommonSteps\Order.cs" />
     <Compile Include="Implementations\_CommonSteps\PagesDbEmulator.cs" />

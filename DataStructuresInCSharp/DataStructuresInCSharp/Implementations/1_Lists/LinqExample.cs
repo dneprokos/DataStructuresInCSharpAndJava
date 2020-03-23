@@ -32,9 +32,25 @@ namespace DataStructuresInCSharp.Implementations._1_Lists
         {
             int[] scores = new int[] { 97, 92, 81, 60 };
 
+            int sum = scores.Sum();
+            Console.WriteLine("Sum of { 97, 92, 81, 60 } =" + sum);
+
+            double average = scores.Average();
+            Console.WriteLine("Average of { 97, 92, 81, 60 } =" + average);
+
+            
+            List<int> skipTake = scores
+                .Skip(1)
+                .Take(2)
+                .ToList();
+
+            Console.Write("Skipping 1 and taking 2 numbers: ");
+            skipTake.ForEach(number => Console.Write(number + " "));
+
             IEnumerable<int> scoreQuery = scores.Where(score => score > 80);
 
 
+            Console.WriteLine("\n");
             // Execute the query.
             foreach (int i in scoreQuery)
             {
@@ -43,6 +59,34 @@ namespace DataStructuresInCSharp.Implementations._1_Lists
             Console.WriteLine("\n");
         }
 
+        public static void SelectExample() 
+        {
+            List<Employee> employees = new List<Employee>
+            {
+                new Employee("Freddy", "DEV", 150000.00),
+                new Employee("Alex", "DEV", 120000.00),
+                new Employee("Rob", "QA", 120000.00)
+            };
+
+            List<string> names =
+            employees
+            .Select(employee => employee.FullName.ToUpperInvariant())
+            .ToList();
+
+            Console.WriteLine("Only names:");
+            names.ForEach(name => Console.WriteLine(name));
+
+
+            var nameAndSalary = employees
+                .Select(employee => new { employee.FullName, employee.Salary })
+                .ToList();
+
+            Console.WriteLine("\nSalaries:");
+            nameAndSalary.ForEach(obj => Console
+            .WriteLine($"{obj.FullName} earns {obj.Salary} USD"));
+        }
+
+       
         public static void LambdaExpressionComplex()
         {
             List<Order> orders = new List<Order>
@@ -74,13 +118,27 @@ namespace DataStructuresInCSharp.Implementations._1_Lists
                     Item = orderOnlyTv.items
                 })
                 .OrderByDescending(o => o.OrderId);
-                
-             
+
+            var query2 = orders
+                .SelectMany(order => order.Items, (order, items) => new { order, items })
+                .Select(orderOnlyTv =>
+                new
+                {
+                    OrderId = orderOnlyTv.order.Id,
+                    OrderType = orderOnlyTv.order.OrderType,
+                    Item = orderOnlyTv.items
+                })
+                .OrderByDescending(o => o.OrderId);
 
             foreach (var item in query)
             {
                 Console.WriteLine(item);
-            }         
+            }
+
+            foreach (var item in query2)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         public static void LambdaExpressionGenericUsefulMethods() 

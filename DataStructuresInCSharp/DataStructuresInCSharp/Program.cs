@@ -5,6 +5,8 @@ using DataStructuresInCSharp.Implementations._4_Queue;
 using DataStructuresInCSharp.Implementations._5_Stack;
 using DataStructuresInCSharp.Implementations._6_Tree;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using static DataStructuresInCSharp.DataStructures;
 
 namespace DataStructuresInCSharp
@@ -13,7 +15,7 @@ namespace DataStructuresInCSharp
     {
         static void Main(string[] args)
         {
-            StackExample.RealExample();
+            LinqExample.SelectExample();
 
             Console.ReadLine();
         }
