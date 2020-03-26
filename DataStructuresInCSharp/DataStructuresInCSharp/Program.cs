@@ -15,7 +15,7 @@ namespace DataStructuresInCSharp
     {
         static void Main(string[] args)
         {
-            LinqExample.SelectExample();
+            LinqExample.LambdaExpressionGenericUsefulMethods();
 
             Console.ReadLine();
         }

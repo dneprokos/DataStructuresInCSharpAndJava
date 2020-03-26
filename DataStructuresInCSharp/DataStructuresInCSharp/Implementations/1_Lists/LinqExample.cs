@@ -220,12 +220,12 @@ namespace DataStructuresInCSharp.Implementations._1_Lists
             IWebElement lastWebElement = menuItems.Last();
 
             //Checks if each element have text
-            bool isTextForEachElement = menuItems.All(el => 
+            bool isTextPresentForEachElement = menuItems.All(el => 
             (el.Text.Equals(string.Empty)) ||
             (el.Text.Equals(null)));
 
             //If any element has text
-            bool isTextForAnyElement = menuItems.Any(el =>
+            bool isTextPresentForAnyElement = menuItems.Any(el =>
             (el.Text.Equals(string.Empty)) ||
             (el.Text.Equals(null)));
 
